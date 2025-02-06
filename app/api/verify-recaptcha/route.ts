@@ -1,12 +1,10 @@
-import { NextResponse } from "next/server";
-
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY || "your-secret-key";
 
 export async function POST(req: Request) {
   try {
     const { token } = await req.json();
     if (!token) {
-      return NextResponse.json({ success: false, message: "No token provided" }, { status: 400 });
+      return Response.json({ success: false, message: "No token provided" }, { status: 400 });
     }
 
     // Verify token with Google reCAPTCHA API
@@ -19,9 +17,9 @@ export async function POST(req: Request) {
       }),
     });
     const data = await response.json();
-    return NextResponse.json(data);
+    return Response.json(data);
   } catch (error) {
     console.error("Error verifying reCAPTCHA:", error);
-    return NextResponse.json({ success: false, message: "Server error" }, { status: 500 });
+    return Response.json({ success: false, message: "Server error" }, { status: 500 });
   }
 }
