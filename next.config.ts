@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [{
-      hostname: 'assets.aceternity.com',
-    }]
+      hostname: 'skillicons.dev',
+    }],
+    dangerouslyAllowSVG: true,
   }
 };
+
+module.exports = nextConfig;

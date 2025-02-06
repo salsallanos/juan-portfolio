@@ -36,7 +36,7 @@ const Hero = () => {
             direction="right"
           >
             {skills.map((item, idx) => (
-              <Image key={idx} src={`https://skillicons.dev/icons?i=${item.name}`} className='px-5' alt={item.name}/>
+              <Image width={100} height={100} key={idx} src={`https://skillicons.dev/icons?i=${item.name}`} className='px-5' alt={item.name} dangerouslyAllowSVG/>
             ))}
           </Marquee>
         </div>

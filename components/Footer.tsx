@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="w-full pb-10" id="contact">
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © {new Date().getFullYear()} Camilo Llanos
+          Copyright © 2025 Camilo Llanos
         </p>
 
         <div className="flex items-center md:gap-3 gap-6 mt-5 lg:mt-0">
